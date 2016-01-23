@@ -16,6 +16,12 @@ Go in a separate directory (the current directory by default).
 Once you have a toolchain for cross-compilation, you can use tools like
 [gox](https://github.com/mitchellh/gox) to cross-compile native builds easily.
 
+[Libraries written in C++ - compiled with different compilers or even just with 
+different releases of the same compiler - often cannot be linked together. DLLs 
+are different: If the DLL is written in C, it can be linked with C++ applications. 
+It' the same with DLLs written in C++, if theirs symbols are exposed through a C 
+interface (declared with extern “C” which makes a C-linkage).] 
+
 gonative will not help you if your own packages rely on Cgo
 
 ### Installation
